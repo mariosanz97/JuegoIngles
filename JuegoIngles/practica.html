@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<link href="colors.css" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>TEST</title>
+<script>
+function allowDrop(ev) {ev.preventDefault();}
+function drag(ev) {ev.dataTransfer.setData("text", ev.target.id);}
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+                document.getElementById(data).style.color="blue";
+                setTimeout(function() {cambiarEstilo (document.getElementById(data))}, 700);
+}
+function cambiarEstilo(elemento) {
+if (elemento.style.color=="blue") { elemento.style.color="red"; } else {elemento.style.color="blue" }
+setTimeout(function() {cambiarEstilo (elemento)}, 700);
+}
+</script>
+</head>
+
+<body style="background-color: lightblue">
+
+
+	<br><br>
+	<div style="float: left;  ">
+		<form style=" margin-left: 100px">
+		<div align="center">
+<div>
+				<img src="azul.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px;  " />
+				<input type="text"  id="azul" name="idProducto" required />
+			
+				<img src="purple.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px; "/>
+				<input  type="text"  id="morado" name="idProducto" required />
+		
+
+				<img src="rojo.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px;  "/>
+				<input  type="text"  id="rojo" name="idProducto" required />
+			
+
+				<img src="gris.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input type="text"  id="gris" name="idProducto" required />
+			
+				<img src="amarillo.png" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+			
+	</div>	<br><br>	
+			
+<div>
+
+			
+				<img src="naranja.png" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input type="text"  id="naranja" name="idProducto" required />
+			
+
+
+			
+				<img src="rosa.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input type="text"  id="rosa" name="idProducto" required />
+			
+				<img src="verde.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input type="text"  id="verde" name="idProducto" required />
+			
+				<img src="Negro.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input type="text"  id="Negro" name="idProducto" required />
+			
+
+			
+			<div align="center" > 
+				<button type="button" class="btn btn-success" onclick="Comprobar()">Check</button> 
+				<button type="button" class="btn btn-success"  ><a href = "Test_DarioTurpin - copia.html" ><font color="white"> Try it with out help</font></a></button>    
+			</div>
+</div>
+</div>
+		</form>
+	</div><br><br>
+
+
+	<div style="float: right; ">
+		<form>
+		<p>Mueve el texto al rectángulo:</p>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br/>
+		<div id="black" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		black
+		</div>
+		<div id="Yellow" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Yellow
+		</div>
+		<div id="Blue" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Blue
+		</div>
+		<div id="Pink" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Pink
+		</div>
+		<div id="Red" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Red
+		</div>
+		<div id="Green" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Green
+		</div>
+		<div id="Grey" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Grey
+		</div>
+		<div id="Orange" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Orange
+		</div>
+		<div id="Purple" draggable="true" ondragstart="drag(event)" style="border-style:solid; display:inline-block; padding:5px;">
+		Purple
+		</div>
+		
+		</form>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+		function Comprobar() {
+			var Correct = 0;
+			var Incorrect = 0;
+
+
+			if (document.getElementById("azul").value === "Blue" ||  document.getElementById("azul").value ==="blue") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("morado").value === "Purple" || document.getElementById("morado").value ==="purple") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("rojo").value === "Red"  || document.getElementById("rojo").value === "red") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("gris").value === "Grey" || document.getElementById("gris").value === "grey") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("amarillo").value === "Yellow" || document.getElementById("amarillo").value === "yellow") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("naranja").value === "Orange" || document.getElementById("naranja").value === "orange") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("rosa").value === "Pink" || document.getElementById("rosa").value==="pink") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("verde").value === "Green" || document.getElementById("verde").value === "green") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("Negro").value === "Black" || document.getElementById("Negro").value === "black") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			
+			document.getElementById("azul").value="";
+			document.getElementById("morado").value="";
+			document.getElementById("rojo").value="";
+			document.getElementById("gris").value="";
+			document.getElementById("amarillo").value="";
+			document.getElementById("naranja").value="";
+			document.getElementById("rosa").value="";
+			document.getElementById("verde").value="";
+			document.getElementById("Negro").value="";
+
+
+			alert("Tienes " + Correct + " respuestas bien y " + Incorrect +" mal");
+
+		}
+
+	</script>
+	
+</body>
+</html> 

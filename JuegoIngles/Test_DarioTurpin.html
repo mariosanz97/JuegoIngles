@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<link href="colors.css" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>TEST</title>
+
+</head>
+
+<body style="background-color: lightblue">
+
+
+	<br><br>
+	<div style="float: left;  ">
+		<form style=" margin-left: 100px">
+
+			<div style="float: left;left: 20px">
+				<img src="azul.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px;  " />
+				<input style="float: right;margin-top: 35px" type="text"  id="azul" name="idProducto" required /><br>
+			</div>
+			<div style="float: left;left: 40px"> 
+				<img src="purple.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px; "/>
+				<input style="float: right;margin-top: 35px" type="text"  id="morado" name="idProducto" required /><br>
+			</div>
+
+			<div style="float: left;left: 20px">
+				<img src="rojo.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px;  "/>
+				<input style="float: right;margin-top: 35px" type="text"  id="rojo" name="idProducto" required /><br>
+			</div><br><br>
+
+<br>
+
+			<div style="float: left;left: 20px"> <br><br>
+				<img src="gris.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="gris" name="idProducto" required /><br>
+			</div>
+
+			<div style="float: left;left: 40px"><br><br>
+				<img src="amarillo.png" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="amarillo" name="idProducto" required /><br>
+			</div>
+
+			<div style="float: left;left: 20px"> <br><br>
+				<img src="naranja.png" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="naranja" name="idProducto" required /><br>
+			</div><br><br>
+
+
+			<div style="float: left;left: 20px"> <br><br>
+				<img src="rosa.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="rosa" name="idProducto" required /><br>
+			</div>
+
+			<div style="float: left;left: 40px"> <br><br>
+				<img src="verde.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="verde" name="idProducto" required /><br>
+			</div>
+
+			<div style="float: left;left: 20px"><br><br>
+				<img src="Negro.jpg" width="280" height="125" style="max-height: 90px; max-width: 100px"/>
+				<input style="float: right;margin-top: 35px" type="text"  id="Negro" name="idProducto" required /><br>
+			</div> 
+
+			
+			<div align="center" style="margin-top: 300px"> 
+				<button type="button" class="btn btn-success" onclick="Comprobar()">Check</button> 
+				<button type="button" class="btn btn-success"  ><a href = "Test_DarioTurpin - copia.html" ><font color="white"> Try it with out help</font></a></button>    
+			</div>
+
+		</form>
+	</div>
+
+
+	<div style="float: right; ">
+		<form style="margin-right: 200px">
+		
+			<p id="Black"> <font face="Comic Sans MS,arial,verdana" > 1. Black </font></p>
+			<p id="Yellow"><font face="Comic Sans MS,arial,verdana" >2. Yellow</font></p>
+			<p id="Blue"><font face="Comic Sans MS,arial,verdana" >3. Blue</font></p>
+			<p id="Pink"><font face="Comic Sans MS,arial,verdana" >4. Pink</font></p>
+			<p id="Red"><font face="Comic Sans MS,arial,verdana" >5. Red</font></p>
+			<p id="Green"><font face="Comic Sans MS,arial,verdana" >6. Green</font></p>
+			<p id="Grey"><font face="Comic Sans MS,arial,verdana" >7. Grey</font></p>
+			<p id="Orange"><font face="Comic Sans MS,arial,verdana" >8. Orange</font></p>
+			<p id="Purple"><font face="Comic Sans MS,arial,verdana" >9. Purple</font></p>
+		</form>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+		function Comprobar() {
+			var Correct = 0;
+			var Incorrect = 0;
+
+
+			if (document.getElementById("azul").value === "Blue" ||  document.getElementById("azul").value ==="blue") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("morado").value === "Purple" || document.getElementById("morado").value ==="purple") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("rojo").value === "Red"  || document.getElementById("rojo").value === "red") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("gris").value === "Grey" || document.getElementById("gris").value === "grey") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("amarillo").value === "Yellow" || document.getElementById("amarillo").value === "yellow") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("naranja").value === "Orange" || document.getElementById("naranja").value === "orange") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("rosa").value === "Pink" || document.getElementById("rosa").value==="pink") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("verde").value === "Green" || document.getElementById("verde").value === "green") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			if (document.getElementById("Negro").value === "Black" || document.getElementById("Negro").value === "black") {
+				Correct++;
+			}else{
+				Incorrect++;
+			}
+			
+			document.getElementById("azul").value="";
+			document.getElementById("morado").value="";
+			document.getElementById("rojo").value="";
+			document.getElementById("gris").value="";
+			document.getElementById("amarillo").value="";
+			document.getElementById("naranja").value="";
+			document.getElementById("rosa").value="";
+			document.getElementById("verde").value="";
+			document.getElementById("Negro").value="";
+
+
+			alert("Tienes " + Correct + " respuestas bien y " + Incorrect +" mal");
+
+		}
+
+	</script>
+	
+</body>
+</html> 
